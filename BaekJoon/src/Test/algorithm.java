@@ -353,30 +353,42 @@ public class algorithm {
 //		}
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 1292
-		Scanner sc = new Scanner(System.in);
-		ArrayList<Integer> list = new ArrayList<>();
-		
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		
-		int sum = 0;
-		// [1 2 2 3 3 3 4 4 4 4 5 5 ...]
-		//  0 1 2 3 4 5 6 7 8 ...
-		for (int i = 1; i <= 1000; i++) {
-			for (int j = 1; j <= i; j++) {
-				list.add(i);
-			}
-		}
-
-		for(int i = a-1; i <= b-1; i++) {
-            sum += list.get(i);
-        }
-		
-		System.out.println(sum);
-		
-		
-		
-		
+//		Scanner sc = new Scanner(System.in);
+//		ArrayList<Integer> list = new ArrayList<>();
+//		
+//		int a = sc.nextInt();
+//		int b = sc.nextInt();
+//		
+//		int sum = 0;
+//		// [1 2 2 3 3 3 4 4 4 4 5 5 ...]
+//		//  0 1 2 3 4 5 6 7 8 ...
+//		for (int i = 1; i <= 1000; i++) {
+//			for (int j = 1; j <= i; j++) {
+//				list.add(i);
+//			}
+//		}
+//		for(int i = a-1; i <= b-1; i++) {
+//            sum += list.get(i);
+//        }
+//		System.out.println(sum);
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 11653
+//		Scanner sc = new Scanner(System.in);
+//		int n = sc.nextInt();
+//		
+//		for (int i = 2; i*i <= n; i++) {
+//			while (n % i == 0) {
+//				System.out.println(i);
+//				n /= i;
+//			}	
+//		}
+//		
+//		if (n > 1) {
+//			System.out.println(n);
+//		}
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 10818
