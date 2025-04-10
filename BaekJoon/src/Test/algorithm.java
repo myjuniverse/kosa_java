@@ -1,0 +1,387 @@
+package Test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class algorithm {
+	public static void main(String[] args) {
+		
+//		# 큰순으로 출력하는 프로그램
+//		Scanner sc = new Scanner(System.in);
+//		System.out.print("입력할 숫자의 갯수를 입력하세요: ");
+//		int num = sc.nextInt(); // 입력할 숫자의 갯수
+//		
+//        int[] arr = new int[num]; // 입력받은 값으로 배열 만들기
+//        
+//        System.out.print(num + "개의 숫자를 입력하세요: ");
+//        for (int i = 0; i < arr.length; i++) {
+//        	arr[i] = sc.nextInt();
+//        }
+//        
+//        for (int i = 0; i < arr.length - 1; i++) { // i: 현재 비교 대상 위치
+//        	for (int j = i + 1; j < arr.length; j++) { // j: i 이후 큰값 찾기
+//                if (arr[i] < arr[j]) {  // 큰 값이 앞으로
+//                    int temp = arr[i];
+//                    arr[i] = arr[j];
+//                    arr[j] = temp;
+//                }
+//            }
+//        }
+//        
+//        
+//        for (int i = 0; i < arr.length; i++) {
+//        	System.out.print(arr[i] + " ");
+//        }
+		
+/* ---------------------------------------------------------------------------- */
+//		# 상위 N명 점수 출력하기
+//		Scanner sc = new Scanner(System.in);
+//		System.out.print("입력할 숫자의 갯수를 입력하세요: ");
+//		int m = sc.nextInt(); // 학생 수 m 입력
+//		
+//        int[] arr = new int[m]; // 입력받은 값으로 배열 만들기
+//        
+//        System.out.print(m + "개의 숫자를 입력하세요: ");
+//        for (int i = 0; i < arr.length; i++) {
+//        	arr[i] = sc.nextInt();
+//        }
+//        
+//        System.out.print("출력할 상위 인원수를 입력하세요: ");
+//        int n = sc.nextInt();
+//        for (int i = 0; i < arr.length - 1; i++) {
+//        	for(int j = i + 1; j < arr.length; j++) {
+//        		if (arr[i] < arr[j]) {
+//        			int temp = arr[i];
+//        			arr[i] = arr[j];
+//        			arr[j] = temp;
+//        		}
+//        	}
+//        }
+//  
+//        for (int i = 0; i < n; i++) {
+//        	System.out.print(arr[i] + " ");
+//        }
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 10807
+//		Scanner sc = new Scanner(System.in);
+//		int count = 0;
+//		
+//		int n = sc.nextInt();
+//		int[] arr = new int[n];
+//
+//		for (int i = 0; i < arr.length; i++) {
+//			arr[i] = sc.nextInt();
+//		}
+//
+//		int v = sc.nextInt();
+//
+//		for (int i = 0; i < arr.length; i++) {
+//			if (v == arr[i]) {
+//				count++;
+//			}
+//		}
+//		  System.out.println(count);
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 10871
+//		Scanner sc = new Scanner(System.in);
+//		int n = sc.nextInt(); // 수열의 개수
+//		int x = sc.nextInt(); // 기준값
+//		
+//		int[] arr = new int[n];
+//		for (int i = 0; i < arr.length; i++) {
+//			arr[i] = sc.nextInt();
+//		}
+//		for (int i = 0; i < arr.length; i++) {
+//			if (arr[i] < x) {
+//				System.out.print(arr[i] + " ");
+//			}
+//		}
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 10818
+//		Scanner sc = new Scanner(System.in);
+//		int n = sc.nextInt();
+//		int[] arr = new int[n];
+//
+//		for (int i = 0; i < arr.length; i++) {
+//			arr[i] = sc.nextInt();
+//		}
+//
+//		int max = arr[0];
+//		int min = arr[0];
+//
+//		for (int i = 0; i < arr.length; i++) {
+//			if (arr[i] > max) {
+//				max = arr[i];
+//			}
+//			if (arr[i] < min) {
+//				min = arr[i];
+//			}
+//		}
+//		System.out.print(min + " " + max);		 
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 	10811
+//		Scanner sc = new Scanner(System.in);
+//		int n = sc.nextInt(); // 바구니 개수
+//		int m = sc.nextInt(); // 뒤집기 횟수
+//		int[] arr = new int[n];
+//		
+//		for (int k = 1; k < m; k++) {
+//			int i = sc.nextInt();
+//			int j = sc.nextInt();
+//		}
+
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 	2562
+//		Scanner sc = new Scanner(System.in);
+//		
+//		int arr[] = new int[9];
+//		int max = arr[0]; // 최댓값을 담을 변수
+//		int index = 0; // 최댓값의 위치를 담는 변수
+//		
+//		for (int i = 0; i < arr.length; i++) {
+//			arr[i] = sc.nextInt();
+//			if (arr[i] > max) {
+//				max = arr[i];
+//				index = i + 1;
+//			}
+//		}
+//		System.out.println(max);
+//		System.out.println(index);
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 1032
+//		다시 해보기
+//		Scanner sc = new Scanner(System.in);
+//
+//		int n = sc.nextInt();
+//		String[] file = new String[n];
+//
+//		for (int i = 0; i < n; i++) {
+//			file[i] = sc.next();
+//		}
+//
+//		String str = "";
+//
+//		for (int i = 0; i < file[0].length(); i++) {
+//			char ch = file[0].charAt(i);
+//			for (int j = 1; j < n; j++) {
+//				if (file[j].charAt(i) != ch) {
+//					ch = '?';
+//					break;
+//				}
+//			}
+//			str += ch;
+//		}
+//		System.out.println(str);
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 1157
+//		Scanner sc = new Scanner(System.in);
+//		String str = sc.nextLine();
+//
+//		int[] a = new int[26];
+//		
+//		for (int i = 0; i < str.length(); i++) {
+//			char ch = str.charAt(i);
+//			
+//			// 소문자면 대문자로 변경
+//			if (ch >= 'a' && ch <= 'z') {
+//				ch = (char) (ch - 32); // a - A = 32
+//			}
+//
+//			a[ch - 'A']++; // 'A' 아스키코드 65 c-a=2 -> 2+1 abc
+//		}
+//
+//		int max = 0;
+//		char result = '?';
+//
+//		for (int i = 0; i < 26; i++) {
+//			if (a[i] > max) {
+//				max = a[i]; // 최댓값
+//				result = (char) (i + 'A'); // (char)(2 + 65'A') = (char)(67) = 'C'
+//			} else if (a[i] == max) {
+//				result = '?'; // 동일
+//			}
+//		}
+//
+//		System.out.println(result);
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 11655
+//		Scanner sc = new Scanner(System.in);
+//		String str = sc.nextLine();
+//		
+//		for (int i = 0; i < str.length(); i++) {
+//			char ch = str.charAt(i);
+//			
+//			if (ch >= 'A' && ch <= 'Z') { // 대문자 사이 일때
+//			    if (ch <= 'M') ch += 13; // += 자동 형변환
+//			    else ch -= 13;
+//			} else if (ch >= 'a' && ch <= 'z') { // 소문자 사이 일때
+//			    if (ch <= 'm') ch += 13;
+//			    else ch -= 13;
+//			}
+//			System.out.print(ch);
+//		}
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 2884
+//		Scanner sc = new Scanner(System.in);
+//		int h = sc.nextInt();
+//		int m = sc.nextInt();
+//
+//		if (m >= 45) {
+//			m -= 45;
+//		} else {
+//			 m += 15;
+//			if (h == 0) 
+//				h = 23;
+//			else h--;
+//		}
+//		
+//		System.out.println(h + " " + m);
+		
+//		Scanner sc = new Scanner(System.in);
+//        
+//        int h = sc.nextInt();
+//        int m = sc.nextInt();
+//        
+//        if(m < 45){
+//            h --;
+//            m = 60-(45-m);
+//            
+//            if(h < 0){
+//                h = 23;
+//            }
+//            System.out.println(h+" "+m);
+//        } else {
+//            System.out.println(h+" "+(m-45));
+//        }
+		
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 2751
+//		public static void main(String[] args) throws IOException {
+//			// BufferedReader
+//			// StringBuilder
+//			// 출력할 때 System.out.println을 반복하지 않고
+//			// 결과를 sb에 다 모은 뒤 한 번에 출력 
+//			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//			StringBuilder sb = new StringBuilder();
+//			
+//			// n개를 입력받는다
+//			int n = Integer.parseInt(br.readLine()); // 입력된 한 줄을 "문자열"로 읽어옴
+//			// readLine()은 항상 String으로 반환되기 때문에 숫자를 입력받아도 문자열로 읽힘
+//			ArrayList<Integer> list = new ArrayList<>();
+//			
+//			// 한 줄씩 정수 입력 받아서 리스트에 추가
+//			for (int i = 0; i < n; i++) {
+//				list.add(Integer.parseInt(br.readLine()));
+//				// 그 문자열을 "정수(int)"로 변환하여 리스트에 추가
+//				// parseInt - 입력값이 숫자라는 걸 확신할 수 있을 때만 쓰는 게 안전
+//			}
+//			
+//			Collections.sort(list);
+//			
+//			// 리스트의 값을 한 줄씩 StringBuilder에 저장
+//			for(int value : list) {
+//			    sb.append(value).append('\n');
+//			}
+//			System.out.println(sb);
+//
+//		}
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 14681
+//		Scanner sc = new Scanner(System.in);
+//		int x = sc.nextInt();
+//		int y = sc.nextInt();
+//		
+//		if (x > 0 && y > 0) System.out.println("1");
+//		else if (x < 0 && y > 0) System.out.println("2");
+//		else if (x < 0 && y < 0) System.out.println("3");
+//		else System.out.println("4");
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 27866
+//		Scanner sc = new Scanner(System.in);
+//		String s = sc.next();
+//		int i = sc.nextInt();
+//		
+//		char ch = s.charAt(i-1);
+//		System.out.println(ch);
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 2743
+//		Scanner sc = new Scanner(System.in);
+//		String s = sc.next();
+//		
+//		System.out.println(s.length());
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 1156
+//		Scanner sc = new Scanner(System.in);
+//		String str = sc.nextLine();
+//		
+//		StringTokenizer token = new StringTokenizer(str, " ");
+//		System.out.println(token.countTokens());
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 3052
+//		Scanner sc = new Scanner(System.in);
+//		Set set = new HashSet<>();
+//		// 10개 입력 받음
+//		for (int i = 0; i < 10; i++) {
+//			set.add(sc.nextInt() % 42);
+//		}
+//		System.out.println(set.size());
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 10813
+//		Scanner sc = new Scanner(System.in);
+//		
+//		int n = sc.nextInt();
+//		int m = sc.nextInt();
+//		
+//		int[] arr = new int[n+1];
+//		
+//		for (int i = 1; i <= n; i++) {
+//			arr[i] = i;
+//		}
+//		
+//		for (int j = 1; j <= m; j++) {
+//			int a = sc.nextInt();
+//			int b = sc.nextInt();
+//			
+//			int temp = arr[a];
+//			arr[a] = arr[b];
+//			arr[b] = temp;
+//			
+//		}
+//		
+//		for (int i = 1; i <= n; i++) {
+//			System.out.print(arr[i] + " ");
+//		}
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 1292
+		Scanner sc = new Scanner(System.in);
+		ArrayList<Integer> list = new ArrayList<>();
+		
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		
+		int sum = 0;
+		// [1 2 2 3 3 3 4 4 4 4 5 5 ...]
+		//  0 1 2 3 4 5 6 7 8 ...
+		for (int i = 1; i <= 1000; i++) {
+			for (int j = 1; j <= i; j++) {
+				list.add(i);
+			}
+		}
+
+		for(int i = a-1; i <= b-1; i++) {
+            sum += list.get(i);
+        }
+		
+		System.out.println(sum);
+		
+		
+		
+		
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 10818
+//		# baekjoon 10818
+		
+		
+	} // main
+}
