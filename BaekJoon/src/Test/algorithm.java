@@ -388,30 +388,34 @@ public class algorithm {
 //		}
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 1110
-		Scanner sc = new Scanner(System.in);
-		
-		int num = sc.nextInt(); // 처음 값
-		int cnum = num; // 저장 값
-		int cycle = 0; // 사이클
-		
-		do {
-			int sum = (num / 10 + num % 10);
-			num = (num % 10) * 10 + (sum % 10);
-//			cnum = (num % 10) * 10 + ((num / 10 + num % 10) % 10);
-			cycle++;
-		} while (num != cnum);
-		
-		System.out.println(cycle);
-		
-		// 4. 그 새로운 수로 다시 같은 작업 반복
-		// 위 과정을 반복한다: 각 자리수 더하기 → 새로운 수 만들기
-		// 5. 처음 숫자로 돌아올 때까지 반복
-		
-		
-		
-		
-		
+//		Scanner sc = new Scanner(System.in);
+//		
+//		int num = sc.nextInt(); // 처음 값
+//		int cnum = num; // 저장 값
+//		int cycle = 0; // 사이클
+//		
+//		do {
+//			int sum = (num / 10 + num % 10);
+//			num = (num % 10) * 10 + (sum % 10);
+//			cycle++;
+//		} while (num != cnum);
+//		
+//		System.out.println(cycle);
 /* ---------------------------------------------------------------------------- */
+//		class Solution {
+//		    public int[] solution(long n) {
+//		        
+//		        String str = Long.toString(n);
+//		        int[] answer = {};
+//		        int[] result = new int[str.length];
+//		        
+//		        for (int i = 0; i < answer.length; i++) {
+//		            result[i] = answer[answer.length -1 -i];
+//		        }
+//		        
+//		        return answer;
+//		    }
+//		}
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
