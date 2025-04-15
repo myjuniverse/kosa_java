@@ -26,7 +26,7 @@ public class TcpMultiChatServer { // outer class
 			ss = new ServerSocket(7777);
 			System.out.println("서버 시작되었습니다. 챗 시작합니다.");
 			while (true) {
-				s = ss.accept();
+				s = ss.accept(); // 응답대기
 				System.out.println("[" + s.getInetAddress() + ":" + s.getPort() + "] 에서 접속하셨습니다.");
 				ServerReceiver thread = new ServerReceiver(s);	// inner class 객체 생성			
 				thread.start();

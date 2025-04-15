@@ -1,11 +1,12 @@
 package Test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class algorithm {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 //		# 큰순으로 출력하는 프로그램
 //		Scanner sc = new Scanner(System.in);
@@ -445,6 +446,30 @@ public class algorithm {
 //				System.out.println(n + " is NOT perfect.");
 //			}
 //		} // while
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 10989
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		StringBuilder sb = new StringBuilder();
+//		
+//		int n = Integer.parseInt(br.readLine());
+//		int[] arr = new int[n];
+//		
+//		for (int i = 0; i < n; i++) {
+//			arr[i] = Integer.parseInt(br.readLine());
+//		}
+//		
+//		Arrays.sort(arr);
+//		
+//		for (int i = 0; i < n; i++) {
+//			sb.append(arr[i]).append("\n");
+//		}
+//		System.out.print(sb);
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 10818
