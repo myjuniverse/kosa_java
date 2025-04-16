@@ -3,7 +3,11 @@ package Test;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
 
 public class algorithm {
 	public static void main(String[] args) throws IOException {
@@ -465,6 +469,49 @@ public class algorithm {
 //		}
 //		System.out.print(sb);
 /* ---------------------------------------------------------------------------- */
+//		# baekjoon 1181
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int n = Integer.parseInt(br.readLine());
+		HashSet<String> set = new HashSet<>();
+		
+		for (int i = 0; i < n; i++) {
+			set.add(br.readLine());
+		}
+		
+		List<String> list = new ArrayList<>(set);
+		// 길이가 짧은것 부터		
+		// 길이가 같으면 사전 순으로
+		Collections.sort(list, new Comparator<String>() {
+			@Override
+			public int compare(String o1, String o2) {
+				if (o1.length() != o2.length()) return o1.length() - o2.length();
+				else return o1.compareTo(o2);
+			}
+		});
+		
+		for (String str : list) {
+			System.out.println(str);
+		}
+		
+		
+		
+		// Comparator 재구현
+//        list.sort((n1, n2) -> {
+//            // 길이가 다르다면 길이 순으로
+//            if(n1.length() != n2.length()) {
+//                return n1.length() - n2.length();
+//            }
+//            // 아니면 사전 순으로 정렬
+//            return n1.compareTo(n2);
+//        });
+//
+//        for(String l: list) {
+//            sb.append(l).append('\n');
+//        }
+//        System.out.println(sb);
+		
+		
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
