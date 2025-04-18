@@ -1,16 +1,10 @@
 package Test;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class algorithm {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		
 //		# 큰순으로 출력하는 프로그램
 //		Scanner sc = new Scanner(System.in);
@@ -470,31 +464,29 @@ public class algorithm {
 //		System.out.print(sb);
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 1181
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		int n = Integer.parseInt(br.readLine());
-		HashSet<String> set = new HashSet<>();
-		
-		for (int i = 0; i < n; i++) {
-			set.add(br.readLine());
-		}
-		
-		List<String> list = new ArrayList<>(set);
-		// 길이가 짧은것 부터		
-		// 길이가 같으면 사전 순으로
-		Collections.sort(list, new Comparator<String>() {
-			@Override
-			public int compare(String o1, String o2) {
-				if (o1.length() != o2.length()) return o1.length() - o2.length();
-				else return o1.compareTo(o2);
-			}
-		});
-		
-		for (String str : list) {
-			System.out.println(str);
-		}
-		
-		
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		
+//		int n = Integer.parseInt(br.readLine());
+//		HashSet<String> set = new HashSet<>();
+//		
+//		for (int i = 0; i < n; i++) {
+//			set.add(br.readLine());
+//		}
+//		
+//		List<String> list = new ArrayList<>(set);
+//		// 길이가 짧은것 부터		
+//		// 길이가 같으면 사전 순으로
+//		Collections.sort(list, new Comparator<String>() {
+//			@Override
+//			public int compare(String o1, String o2) {
+//				if (o1.length() != o2.length()) return o1.length() - o2.length();
+//				else return o1.compareTo(o2);
+//			}
+//		});
+//		
+//		for (String str : list) {
+//			System.out.println(str);
+//		}
 		
 		// Comparator 재구현
 //        list.sort((n1, n2) -> {
@@ -510,10 +502,56 @@ public class algorithm {
 //            sb.append(l).append('\n');
 //        }
 //        System.out.println(sb);
-		
-		
 /* ---------------------------------------------------------------------------- */
+//		# baekjoon 10828
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		StringBuilder sb = new StringBuilder();
+//		
+//		int n = Integer.parseInt(br.readLine());
+//		Stack<Integer> stack = new Stack<>();
+//		
+//		for (int i = 0; i < n; i++) {
+//			String str = br.readLine();
+//			
+//			// push 3
+//			if (str.startsWith("push")) {
+//				int x = Integer.parseInt(str.split(" ")[1]); // 정수 추출
+//				stack.push(x);
+//			 
+//			// pop: 스택에서 가장 위에 있는 정수를 빼고, 그 수를 출력
+//			// 만약 스택에 들어있는 정수가 없는 경우에는 -1을 출력
+//			} else if (str.equals("pop")) {
+//				if (stack.empty()) {
+//					sb.append(-1).append("\n");
+//				} else {
+//					sb.append(stack.pop()).append("\n");
+//				}
+//			} else if (str.equals("size")) {
+//				sb.append(stack.size()).append("\n");
+//				
+//			// empty: 스택이 비어있으면 1, 아니면 0을 출력
+//			} else if (str.equals("empty")) {
+//				if (stack.empty()) sb.append(1).append("\n");
+//				else sb.append(0).append("\n");
+//
+//			// top: 스택의 가장 위에 있는 정수를 출력
+//			// 만약 스택에 들어있는 정수가 없는 경우에는 -1을 출력
+//			} else if (str.equals("top")) {
+//				if (stack.empty()) sb.append(-1).append("\n");
+//				else sb.append(stack.peek()).append("\n");
+//			} 
+//		}
+//		System.out.println(sb);
 /* ---------------------------------------------------------------------------- */
+//		# baekjoon 1427
+//		Scanner sc = new Scanner(System.in);
+//		char[] arr = sc.next().toCharArray();
+//		
+//		Arrays.sort(arr);
+//		
+//		for (int i = arr.length-1; i >= 0; i--) {
+//			System.out.print(arr[i]);
+//		}	
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
