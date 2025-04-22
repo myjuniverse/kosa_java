@@ -1,10 +1,13 @@
 package Test;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.Comparator;
 
 public class algorithm {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 //		# 큰순으로 출력하는 프로그램
 //		Scanner sc = new Scanner(System.in);
@@ -553,7 +556,53 @@ public class algorithm {
 //			System.out.print(arr[i]);
 //		}	
 /* ---------------------------------------------------------------------------- */
+//		# baekjoon 14425
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		StringTokenizer st = new StringTokenizer(br.readLine());
+//		
+//		int n = Integer.parseInt(st.nextToken());
+//		int m = Integer.parseInt(st.nextToken());
+//		
+//		HashSet<String> set = new HashSet<String>();
+//	
+//		for (int i = 0; i < n; i++) {
+//			set.add(br.readLine());
+//		}
+//		int count = 0;	
+//		for (int i = 0; i < m; i++) {
+//			if (set.contains(br.readLine())) count++;
+//		}
+//		System.out.println(count);
 /* ---------------------------------------------------------------------------- */
+//		# baekjoon 11650
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int n = Integer.parseInt(br.readLine());
+		int[][] arr = new int[n][2];  // arr[i][0] = x, arr[i][1] = y
+
+		
+		for (int i = 0; i < n; i++) {
+			String[] str = br.readLine().split(" ");
+			arr[i][0] = Integer.parseInt(str[0]);
+			arr[i][1] = Integer.parseInt(str[1]);
+		}
+		
+		Arrays.sort(arr, new Comparator<int[]>() {
+			@Override
+			public int compare(int[] x, int[] y) {
+				// 첫번째 원소의 값이 같을 때 두번쨰 원소의 값을 기준으로 정렬
+				if (x[0] == y[0]) return x[1] - y[1];
+				// 같지 않을 시 첫번째 원소를 기준으로 정렬
+				else return x[0] - y[0];
+			}
+		});
+		
+		for (int i = 0; i < n; i++) {
+			System.out.println(arr[i][0] + " " + arr[i][1]);
+		}
+		
+		
+		
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
