@@ -3,11 +3,6 @@ package Test;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.StringTokenizer;
 
 public class algorithm {
 	public static void main(String[] args) throws IOException {
@@ -648,10 +643,34 @@ public class algorithm {
 //		Set<Integer> bMinusA = new HashSet<>(setB); // 복사
 //		bMinusA.removeAll(setA); // B에서 A에 있는 원소 제거
 //
-//		System.out.println(aMinusB.size() + bMinusA.size());		
+//		System.out.println(aMinusB.size() + bMinusA.size());
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 12605
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int n = Integer.parseInt(br.readLine());
+		
+		for (int i = 0; i < n; i++) {
+			String[] str = br.readLine().split(" ");
+			
+			System.out.print("Case #" + (i + 1) + ": ");
+			for (int j = str.length - 1; j >= 0; j--) {
+				System.out.print(str[j] + " ");
+			}
+			System.out.println();
+		}
+		
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 10818
 //		# baekjoon 10818
+
+		
+		
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
 		
 		
 	} // main

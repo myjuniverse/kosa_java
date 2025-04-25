@@ -78,11 +78,8 @@ public class GiftController {
 		} // end while
 	} // menu()
 	
-	
 	// rollback
-	public static void rollback() {
-		
-	}
+	// commit
 	
 	// selectAll
 	public static void selectAll(String className) throws SQLException {
@@ -155,6 +152,7 @@ public class GiftController {
 	public static void update(String className) throws SQLException {
 		selectAll(className);
 		
+		// 항목별 수정
 		
 		String sql = "UPDATE " + className + " SET gno = ?, gname = ?, g_start = ?, g_end = ? WHERE gno = ?";
 		ps = conn.prepareStatement(sql);
@@ -214,9 +212,6 @@ public class GiftController {
 		}
 		
 	}
-	
-	// commit
-	
 	
 	
 }
