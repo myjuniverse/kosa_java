@@ -12,9 +12,9 @@ public class GiftInsert {
 		Class.forName("oracle.jdbc.OracleDriver");
 		Connection conn = DriverManager.getConnection(
 				"jdbc:oracle:thin:@127.0.0.1:1521:xe", 
-				"kingsmile", "oracle");
+				"msa", "oracle");
 		
-		//3. 사용 (DML 명령어 - Insert )  - Statement  / PreparedStatement
+		// 3. 사용 (DML 명령어 - Insert) - Statement
 		Statement stmt = conn.createStatement();
 //		insert into gift values(11,'사탕세트', 100, 9000);
 //		1)고정값 레코드 입력
@@ -27,7 +27,7 @@ public class GiftInsert {
 		int result = stmt.executeUpdate(sql);
 		System.out.println(result + "  개 데이터 추가 성공함");
 		
-		//4. 닫기 (자원 반환)
+		// 4. 닫기 (자원 반환)
 		stmt.close();		conn.close();
 	}
 }
