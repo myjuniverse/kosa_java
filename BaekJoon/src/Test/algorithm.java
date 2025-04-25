@@ -3,8 +3,9 @@ package Test;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashSet;
 
 public class algorithm {
 	public static void main(String[] args) throws IOException {
@@ -575,35 +576,55 @@ public class algorithm {
 //		System.out.println(count);
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 11650
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		
+//		int n = Integer.parseInt(br.readLine());
+//		int[][] arr = new int[n][2];  // arr[i][0] = x, arr[i][1] = y
+//
+//		
+//		for (int i = 0; i < n; i++) {
+//			String[] str = br.readLine().split(" ");
+//			arr[i][0] = Integer.parseInt(str[0]);
+//			arr[i][1] = Integer.parseInt(str[1]);
+//		}
+//		
+//		Arrays.sort(arr, new Comparator<int[]>() {
+//			@Override
+//			public int compare(int[] x, int[] y) {
+//				// 첫번째 원소의 값이 같을 때 두번쨰 원소의 값을 기준으로 정렬
+//				if (x[0] == y[0]) return x[1] - y[1];
+//				// 같지 않을 시 첫번째 원소를 기준으로 정렬
+//				else return x[0] - y[0];
+//			}
+//		});
+//		
+//		for (int i = 0; i < n; i++) {
+//			System.out.println(arr[i][0] + " " + arr[i][1]);
+//		}
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 7785
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int n = Integer.parseInt(br.readLine());
-		int[][] arr = new int[n][2];  // arr[i][0] = x, arr[i][1] = y
+		HashSet<String> set = new HashSet<String>(n);
 
-		
 		for (int i = 0; i < n; i++) {
 			String[] str = br.readLine().split(" ");
-			arr[i][0] = Integer.parseInt(str[0]);
-			arr[i][1] = Integer.parseInt(str[1]);
+			
+			String name = str[0];
+			String log = str[1];
+			
+			if (log.equals("enter")) set.add(name);
+			else set.remove(name);
 		}
 		
-		Arrays.sort(arr, new Comparator<int[]>() {
-			@Override
-			public int compare(int[] x, int[] y) {
-				// 첫번째 원소의 값이 같을 때 두번쨰 원소의 값을 기준으로 정렬
-				if (x[0] == y[0]) return x[1] - y[1];
-				// 같지 않을 시 첫번째 원소를 기준으로 정렬
-				else return x[0] - y[0];
-			}
-		});
+		ArrayList<String> arrList = new ArrayList<>(set);
+		arrList.sort(Comparator.reverseOrder());
 		
-		for (int i = 0; i < n; i++) {
-			System.out.println(arr[i][0] + " " + arr[i][1]);
+		for (String result : arrList) {
+			System.out.println(result);
 		}
 		
-		
-		
-/* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 10818
