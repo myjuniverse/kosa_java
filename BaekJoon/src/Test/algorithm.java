@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashSet;
+import java.util.Set;
+import java.util.StringTokenizer;
 
 public class algorithm {
 	public static void main(String[] args) throws IOException {
@@ -580,7 +582,6 @@ public class algorithm {
 //		
 //		int n = Integer.parseInt(br.readLine());
 //		int[][] arr = new int[n][2];  // arr[i][0] = x, arr[i][1] = y
-//
 //		
 //		for (int i = 0; i < n; i++) {
 //			String[] str = br.readLine().split(" ");
@@ -603,29 +604,51 @@ public class algorithm {
 //		}
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 7785
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		int n = Integer.parseInt(br.readLine());
-		HashSet<String> set = new HashSet<String>(n);
-
-		for (int i = 0; i < n; i++) {
-			String[] str = br.readLine().split(" ");
-			
-			String name = str[0];
-			String log = str[1];
-			
-			if (log.equals("enter")) set.add(name);
-			else set.remove(name);
-		}
-		
-		ArrayList<String> arrList = new ArrayList<>(set);
-		arrList.sort(Comparator.reverseOrder());
-		
-		for (String result : arrList) {
-			System.out.println(result);
-		}
-		
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		
+//		int n = Integer.parseInt(br.readLine());
+//		HashSet<String> set = new HashSet<String>(n);
+//
+//		for (int i = 0; i < n; i++) {
+//			String[] str = br.readLine().split(" ");
+//			
+//			String name = str[0];
+//			String log = str[1];
+//			
+//			if (log.equals("enter")) set.add(name);
+//			else set.remove(name);
+//		}
+//		
+//		ArrayList<String> arrList = new ArrayList<>(set);
+//		arrList.sort(Comparator.reverseOrder());
+//		
+//		for (String result : arrList) {
+//			System.out.println(result);
+//		}
 /* ---------------------------------------------------------------------------- */
+//		# baekjoon 10818
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		StringTokenizer st = new StringTokenizer(br.readLine());
+//
+//		int a = Integer.parseInt(st.nextToken());
+//		int b = Integer.parseInt(st.nextToken());
+//
+//		Set<Integer> setA = new HashSet<>();
+//		Set<Integer> setB = new HashSet<>();
+//
+//		st = new StringTokenizer(br.readLine());
+//		for (int i = 0; i < a; i++) setA.add(Integer.parseInt(st.nextToken()));
+//
+//		st = new StringTokenizer(br.readLine());
+//		for (int i = 0; i < b; i++) setB.add(Integer.parseInt(st.nextToken()));
+//
+//		Set<Integer> aMinusB = new HashSet<>(setA); // 복사
+//		aMinusB.removeAll(setB); // A에서 B에 있는 원소 제거
+//
+//		Set<Integer> bMinusA = new HashSet<>(setB); // 복사
+//		bMinusA.removeAll(setA); // B에서 A에 있는 원소 제거
+//
+//		System.out.println(aMinusB.size() + bMinusA.size());		
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 10818
 //		# baekjoon 10818
