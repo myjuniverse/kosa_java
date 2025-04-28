@@ -18,15 +18,12 @@ public class ProductController {
 		} else {
 			new MainEntry().displaypList(pList);
 		}
-		
 	}
-	
 	
 	// 상품 추가
 	public void insertProduct(String productCode, String productName, int productPrice) {
 		Product p = new Product(productCode, productName, productPrice);
 		int result = new ProductService().insertProduct(p);
-		
 		
 		if (result > 0) {
 			new MainEntry().displaySuccess("\n상품이 추가되었습니다.");
@@ -61,7 +58,6 @@ public class ProductController {
 		} else {
 			new MainEntry().displayFail("\n상품 삭제에 실패하였습니다.");
 		}
-		
 	}
 
 	// ?

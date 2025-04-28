@@ -40,14 +40,14 @@ public class ProductDao {
 			while(rs.next()) {
 				Product p = new Product();
 				
-				p.setProductCode(rs.getString("product_code")); // sql name
-				p.setProductName(rs.getString("product_name"));
-				p.setProductPrice(rs.getInt("product_price"));
+				p.setProductCode(rs.getString("p_code")); // sql name
+				p.setProductName(rs.getString("p_name"));
+				p.setProductPrice(rs.getInt("p_price"));
 				
 				pList.add(p);
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (SQLException e) {
+		    e.printStackTrace();
 		} finally {
 			JDBCTemplate.close(rs);
 			JDBCTemplate.close(pstmt);
@@ -68,8 +68,10 @@ public class ProductDao {
 			pstmt.setString(2, p.getProductName());
 			pstmt.setInt(3, p.getProductPrice());
 			
-		} catch (Exception e) {
-			e.printStackTrace();
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+		    e.printStackTrace();
 		} finally {
 			JDBCTemplate.close(pstmt);
 		}
@@ -85,10 +87,10 @@ public class ProductDao {
 		try {
 			pstmt = conn.prepareStatement(sql);
 			
-			pstmt.setString(1, p.getProductCode());
-			pstmt.setString(2, p.getProductName());
-			pstmt.setInt(3, p.getProductPrice());
-			
+			pstmt.setString(1, p.getProductName());
+			pstmt.setInt(2, p.getProductPrice());
+			pstmt.setString(3, p.getProductCode());
+
 			result = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {

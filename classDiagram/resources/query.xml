@@ -11,13 +11,13 @@
 	</entry>
 	<entry key="updateProduct">
 		UPDATE PRODUCT
-			SET PRODUCT_CODE = ?,
-				PRODUCT_NAME = ?,
-				PRODUCT_PRICDE = ?
+			SET P_NAME = ?,
+			    P_PRICE = ?
+			WHERE P_CODE = ?
 	</entry>
 	<entry key="deleteProduct">
 		DELETE FROM PRODUCT
-			WHERE PRODUCT_CODE = ?
+			WHERE P_CODE = ?
 	</entry>
 
 

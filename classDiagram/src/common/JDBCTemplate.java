@@ -17,7 +17,7 @@ public class JDBCTemplate {
 		Properties prop = new Properties();
 
 		try {
-			prop.load(new FileInputStream("book_resources/driver.properties"));
+			prop.load(new FileInputStream("resources/driver.properties"));
 
 			Class.forName(prop.getProperty("driver"));
 			conn = DriverManager.getConnection(prop.getProperty("url"), prop.getProperty("username"),

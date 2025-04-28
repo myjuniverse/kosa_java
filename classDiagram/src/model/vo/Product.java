@@ -33,6 +33,10 @@ public class Product {
 		this.productPrice = productPrice;
 	}
 
-	
+	@Override
+	public String toString() {
+	    return getProductCode() + "\t" + getProductName() + "\t" + getProductPrice();
+	}
+
 	
 }
