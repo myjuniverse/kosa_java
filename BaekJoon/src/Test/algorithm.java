@@ -28,8 +28,6 @@ public class algorithm {
 //                }
 //            }
 //        }
-//        
-//        
 //        for (int i = 0; i < arr.length; i++) {
 //        	System.out.print(arr[i] + " ");
 //        }
@@ -646,32 +644,44 @@ public class algorithm {
 //		System.out.println(aMinusB.size() + bMinusA.size());
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 12605
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		int n = Integer.parseInt(br.readLine());
-		
-		for (int i = 0; i < n; i++) {
-			String[] str = br.readLine().split(" ");
-			
-			System.out.print("Case #" + (i + 1) + ": ");
-			for (int j = str.length - 1; j >= 0; j--) {
-				System.out.print(str[j] + " ");
-			}
-			System.out.println();
-		}
-		
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		
+//		int n = Integer.parseInt(br.readLine());
+//		
+//		for (int i = 0; i < n; i++) {
+//			String[] str = br.readLine().split(" ");
+//			
+//			System.out.print("Case #" + (i + 1) + ": ");
+//			for (int j = str.length - 1; j >= 0; j--) {
+//				System.out.print(str[j] + " ");
+//			}
+//			System.out.println();
+//		}
+/* ---------------------------------------------------------------------------- */
+//		# baekjoon 1934
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		
+//		int t = Integer.parseInt(br.readLine());
+//		int sum = 0;
+//		
+//		for (int i = 0; i < t; i++) {
+//			String[] str = br.readLine().split(" ");
+//			
+//			int a = Integer.parseInt(str[0]);
+//			int b = Integer.parseInt(str[1]);
+//			
+//			System.out.println(a * b / gcd(a, b));
+//		}
+//		public static int gcd(int a, int b) {
+//		    if (b == 0) return a;
+//		    return gcd(b, a % b);
+//		}
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 //		# baekjoon 10818
-//		# baekjoon 10818
-
 		
-		
-/* ---------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------- */
-		
-		
-	} // main
+	}
 }

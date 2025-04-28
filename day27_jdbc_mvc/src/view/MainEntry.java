@@ -10,7 +10,5 @@ public class MainEntry {
 		GiftController.connect();
 		GiftController.menu();
 		
-		
-		
 	}
 }
