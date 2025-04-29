@@ -1,23 +1,23 @@
 package model.vo;
 
 public class Product {
-	private String productCode;
+	private int productCode;
 	private String productName;
 	private int productPrice;
 	
 	public Product() {}
 	
-	public Product(String productCode, String productName, int productPrice) {
+	public Product(int productCode, String productName, int productPrice) {
 		super();
 		this.productCode = productCode;
 		this.productName = productName;
 		this.productPrice = productPrice;
 	}
 	
-	public String getProductCode() {
+	public int getProductCode() {
 		return productCode;
 	}
-	public void setProductCode(String productCode) {
+	public void setProductCode(int productCode) {
 		this.productCode = productCode;
 	}
 	public String getProductName() {

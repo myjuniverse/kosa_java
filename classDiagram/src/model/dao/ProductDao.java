@@ -40,7 +40,7 @@ public class ProductDao {
 			while(rs.next()) {
 				Product p = new Product();
 				
-				p.setProductCode(rs.getString("p_code")); // sql name
+				p.setProductCode(rs.getInt("p_code")); // sql name
 				p.setProductName(rs.getString("p_name"));
 				p.setProductPrice(rs.getInt("p_price"));
 				
@@ -64,7 +64,7 @@ public class ProductDao {
 		try {
 			pstmt = conn.prepareStatement(sql);
 			
-			pstmt.setString(1, p.getProductCode());
+			pstmt.setInt(1, p.getProductCode());
 			pstmt.setString(2, p.getProductName());
 			pstmt.setInt(3, p.getProductPrice());
 			
@@ -89,7 +89,7 @@ public class ProductDao {
 			
 			pstmt.setString(1, p.getProductName());
 			pstmt.setInt(2, p.getProductPrice());
-			pstmt.setString(3, p.getProductCode());
+			pstmt.setInt(3, p.getProductCode());
 
 			result = pstmt.executeUpdate();
 			
@@ -102,7 +102,7 @@ public class ProductDao {
 		return result;
 	}
 
-	public int deleteProduct(Connection conn, String productCode) {
+	public int deleteProduct(Connection conn, int productCode) {
 		
 		int result = 0;
 		PreparedStatement pstmt = null;
@@ -110,7 +110,7 @@ public class ProductDao {
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, productCode);
+			pstmt.setInt(1, productCode);
 			
 			result = pstmt.executeUpdate();
 			

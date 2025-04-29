@@ -21,8 +21,8 @@ public class ProductController {
 	}
 	
 	// 상품 추가
-	public void insertProduct(String productCode, String productName, int productPrice) {
-		Product p = new Product(productCode, productName, productPrice);
+	public void insertProduct(Product p) {
+		p = new Product();
 		int result = new ProductService().insertProduct(p);
 		
 		if (result > 0) {
@@ -33,7 +33,7 @@ public class ProductController {
 	}
 	
 	// 상품 수정
-	public void updateProduct(String productCode, String productName, int productPrice) {
+	public void updateProduct(int productCode, String productName, int productPrice) {
 		Product p = new Product();
 		
 		p.setProductCode(productCode);
@@ -50,7 +50,7 @@ public class ProductController {
 	}
 	
 	// 상품 삭제
-	public void deleteProduct(String productCode) {
+	public void deleteProduct(int productCode) {
 		int result = new ProductService().deleteProduct(productCode);
 		
 		if (result > 0) {
@@ -58,12 +58,6 @@ public class ProductController {
 		} else {
 			new MainEntry().displayFail("\n상품 삭제에 실패하였습니다.");
 		}
-	}
-
-	// ?
-	public void insertProduct(Product product) {
-		// TODO Auto-generated method stub
-		
 	}
 	
 }

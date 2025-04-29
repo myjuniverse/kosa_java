@@ -26,9 +26,10 @@ public class MainEntry {
 			
 			switch(mainMenu) {
 			case 1: pc.productList(); break;
-			case 2: // 상품 주문
+			case 2: // 상품 추가
 			    System.out.print("추가할 상품 코드 입력: ");
-			    String pCode = sc.nextLine();
+			    int pCode = sc.nextInt();
+			    sc.nextLine();
 			    
 			    System.out.print("추가할 상품명 입력: ");
 			    String pName = sc.nextLine();
@@ -37,12 +38,12 @@ public class MainEntry {
 			    int pPrice = sc.nextInt();
 			    sc.nextLine(); // 버퍼 클리어
 
-			    Product newProduct = new Product(pCode, pName, pPrice);
-			    pc.insertProduct(newProduct);
+			    pc.insertProduct(new Product(pCode, pName, pPrice));
 			    break;
 			case 3: // 상품 수정
 			    System.out.print("수정할 상품 코드 입력: ");
-			    String updateCode = sc.nextLine();
+			    int updateCode = sc.nextInt();
+			    sc.nextLine();
 			    
 			    System.out.print("새 상품명 입력: ");
 			    String updateName = sc.nextLine();
@@ -56,7 +57,8 @@ public class MainEntry {
 
 			case 4: // 상품 삭제
 			    System.out.print("삭제할 상품 코드 입력: ");
-			    String deleteCode = sc.nextLine();
+			    int deleteCode = sc.nextInt();
+			    sc.nextLine();
 			    
 			    pc.deleteProduct(deleteCode);
 			    break;

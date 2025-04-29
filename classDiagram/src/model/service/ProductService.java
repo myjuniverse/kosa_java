@@ -44,7 +44,7 @@ public class ProductService {
 		return result;
 	}
 
-	public int deleteProduct(String productCode) {
+	public int deleteProduct(int productCode) {
 		Connection conn = JDBCTemplate.getConnection();
 		int result = new ProductDao().deleteProduct(conn, productCode);
 		
